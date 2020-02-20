@@ -1,0 +1,13 @@
+.Loader-watch {
+  font-size: 50px;
+  color: #007cba;
+  animation: pulsate 1s infinite ease-in-out alternate;
+  @keyframes pulsate {
+    from {
+      transform: scale(0.5);
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
+}
