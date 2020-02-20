@@ -1,0 +1,89 @@
+.section-parallax,
+.section,
+.section--blank {
+  --theme-color: var(--dark-color);
+  --font-color: white;
+  .field-wrap {
+    flex-direction: row !important;
+    flex-flow: nowrap !important;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .nf-field-label label {
+    font-family: 'Brandon Grotesque', sans-serif;
+    font-weight: 400;
+    // font-size: 15px;
+  }
+  .nf-field-container {
+    margin-bottom: 5px !important;
+  }
+  .nf-field-element {
+    width: 55% !important;
+  }
+  .nf-form-content .label-above .nf-field-label {
+    margin: 0;
+    margin-right: 5px;
+  }
+  .nf-error.field-wrap .nf-field-element:after {
+    --size: 30px;
+    height: var(--size);
+    width: var(--size);
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nf-form-content .list-select-wrap .nf-field-element > div {
+    background-color: transparent;
+    height: auto !important;
+    padding: 15px;
+    border: none;
+  }
+
+  .list-select-wrap select:focus + div {
+    background-color: transparent !important;
+    border-bottom: var(--theme-color) solid 1px !important;
+    // border-color: var(--theme-color);
+  }
+  .list-select-wrap select:focus option {
+    color: black;
+  }
+  .ninja-forms-field.nf-element {
+    --theme-color: var(--dark-color);
+    padding: 6px !important;
+    height: auto !important;
+    color: var(--theme-color);
+    border: none;
+    border-bottom: var(--theme-color) solid 1px;
+    background-color: transparent !important;
+    &:focus {
+      color: var(--theme-color);
+      border-color: var(--theme-color);
+    }
+  }
+  .nf-form-content input[type='button'] {
+  }
+  .nf-error .nf-error-msg,
+  .nf-form-fields-required {
+    text-align: center;
+  }
+  .nf-form-content button,
+  .nf-form-content input[type='button'],
+  .nf-form-content input[type='submit'] {
+    background-color: var(--theme-color) !important;
+    color: var(--font-color) !important;
+    cursor: pointer;
+    margin-top: 5px;
+    &:hover {
+      background-color: var(--theme-color) !important;
+    }
+  }
+  @at-root .dark {
+    --theme-color: white;
+    .ninja-forms-field.nf-element {
+      --theme-color: white;
+      --font-color: var(--dark-color);
+      // --dark-color: white;
+    }
+  }
+}

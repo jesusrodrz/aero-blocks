@@ -1,0 +1,39 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.section-jet-types {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  max-height: 450px;
+  overflow-x: hidden;
+}
+.jet-type {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  padding: 10px 0;
+  color: #565656;
+  &:hover {
+    text-decoration: #565656;
+  }
+  &__img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+  }
+  &__container {
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__title {
+    font-weight: normal;
+    color: #565656;
+    text-transform: uppercase;
+  }
+}

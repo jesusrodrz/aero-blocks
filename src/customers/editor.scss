@@ -1,0 +1,45 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.customer {
+  &__title {
+    font-size: 24px;
+  }
+  &__logo-container,
+  &__images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:not(.has-image) {
+      background-color: #f3f4f5;
+    }
+  }
+  &__images.has-image {
+    display: grid;
+    overflow: hidden;
+    grid-column-gap: 0px;
+  }
+  &__logo-btn {
+    position: relative;
+    z-index: 10;
+  }
+  &__images.has-image &__images-btn {
+    position: absolute;
+    z-index: 10;
+    top: -2px;
+    left: 50%;
+    transform: translateY(-100%) translateX(-50%);
+    transition: transform ease-in-out 0.3s;
+  }
+  &__images.has-image:hover &__images-btn {
+    transform: translateY(150%) translateX(-50%);
+  }
+  &__logo-img {
+    z-index: 5;
+  }
+  &__content {
+  }
+}

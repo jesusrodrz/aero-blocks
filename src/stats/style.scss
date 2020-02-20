@@ -1,0 +1,82 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  padding: 0 calc(5%);
+  @include media(1333px) {
+    padding: 0 calc((100% - 1200px) / 2);
+  }
+  @include media(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include media(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include media(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media(xs) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.stat {
+  flex: auto;
+  text-align: center;
+  border-right: 1px solid #e1e1e1;
+  margin-bottom: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 1.5rem;
+  @media only screen and(min-width: 800px) {
+    &:nth-of-type(4n) {
+      border: none;
+    }
+  }
+  @media only screen and(min-width: 540px) and (max-width: 800px) {
+    &:nth-of-type(3n) {
+      border: none;
+    }
+  }
+  @media only screen and(min-width: 320px) and (max-width: 540px) {
+    &:nth-of-type(2n) {
+      border: none;
+    }
+  }
+  @media only screen and (max-width: 320px) {
+    border: none;
+    &:nth-of-type(n):not(:last-of-type) {
+      border-bottom: 1px solid #e1e1e1;
+    }
+  }
+  // @media only screen and(min-width: 800px) {
+  //   &:nth-of-type(3n) {
+  //     border: none;
+  //   }
+  // }
+  // @media only screen and(min-width: 800px) {
+  //   &:nth-of-type(n + 3) {
+  //     border: none;
+  //   }
+  // }
+
+  &__number {
+    font-size: 50px;
+    margin-bottom: 10px;
+    line-height: 85px;
+    color: #565656;
+    width: 100%;
+    font-weight: 700;
+  }
+  &__text {
+    font-size: 21px;
+    color: #000;
+  }
+}

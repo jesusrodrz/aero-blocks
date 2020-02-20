@@ -1,0 +1,24 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.section--blank {
+  // max-width: 1344px;
+  padding: 30px 0;
+  margin: auto;
+  --v-pd: 30px;
+  padding: var(--v-pd) calc(5%);
+  @include media(1333px) {
+    padding: var(--v-pd) calc((100% - 1200px) / 2);
+  }
+  word-break: break-all;
+  p {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+}
