@@ -1,0 +1,22 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.section-jets {
+  &.no-data {
+    display: block;
+    min-height: 50vh;
+  }
+  &__title {
+    text-align: center;
+  }
+}
+.jet-item {
+  &__title {
+    margin: 5px !important;
+    line-height: initial !important;
+    font-size: 18px !important;
+  }
+}

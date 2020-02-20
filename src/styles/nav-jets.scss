@@ -1,0 +1,42 @@
+.nav-jets {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  max-width: 250px;
+  margin-bottom: 2rem;
+  justify-content: center;
+  a,
+  span {
+    display: block;
+    margin: 0 5px;
+    padding: 10px 20px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 900;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    font-size: 15px;
+    height: 2rem;
+    width: 2rem;
+  }
+  span {
+    background: rgba(209, 209, 209, 0.5);
+  }
+  a {
+    background: rgba(99, 99, 99, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    color: white;
+    &:hover {
+      background: #2b323a;
+    }
+  }
+}
+.jets-archive-title {
+  margin: 2rem auto;
+  margin-bottom: 0;
+  width: 90%;
+  text-align: center;
+}

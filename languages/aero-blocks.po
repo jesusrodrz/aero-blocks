@@ -1,0 +1,19 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Text in echo
+#: src/templates/jets.php:25
+msgid "Contáctanos"
+msgstr ""
+
+#. Text in echo
+#: src/templates/jets.php:32
+msgid "Jets privados recomendados"
+msgstr ""
+
+#. Text in echo
+#: src/templates/jets.php:26
+msgid "Llamanos y una de nuestras asesoras lo atenderá con la mejor disposición, brindándole una información personalizada "
+msgstr ""
