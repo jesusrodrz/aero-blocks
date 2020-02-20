@@ -1,0 +1,52 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.section-parallax {
+  position: relative;
+  // min-height: 90vh;
+  --url-image: transparent;
+  &:not(.default-width) {
+    --v-pd: 30px;
+    padding: var(--v-pd) calc(5%);
+    @include media(1333px) {
+      padding: var(--v-pd) calc((100% - 1200px) / 2);
+    }
+  }
+  --primary: var(--dark-color, black);
+  color: var(--dark-color, black);
+  overflow: hidden;
+  background: var(--url-image);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  & > * {
+    position: relative;
+    z-index: 10;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &.dark {
+    color: var(--light-color, white);
+    --primary: var(--light-color, white);
+    &::before {
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+  &.radius {
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,100 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.jet-stats {
+  &__add {
+    background-color: #eee;
+    border-radius: 5px;
+    color: #8a8a8a;
+    border: none;
+    outline: none;
+    width: 42%;
+    height: auto;
+    align-self: center;
+    justify-self: center;
+    cursor: pointer;
+    &:hover {
+      color: #007cba;
+      background-color: rgb(247, 247, 247);
+    }
+  }
+  &__dropdown-btn {
+    font-size: 1.2em;
+    margin: 0.5em;
+    padding: 0.25em;
+    display: inline-block;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    background-color: #eee;
+    &:hover,
+    &.active {
+      color: #007cba;
+      background-color: rgb(247, 247, 247);
+    }
+  }
+}
+.jet-stat {
+  margin-bottom: 0px;
+  position: relative;
+  &__icon-btn,
+  &__select,
+  &__delete {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  &__icon-btn {
+  }
+
+  &__text {
+    min-width: 3rem;
+  }
+  &__delete,
+  &__select {
+    --size: 30px;
+    height: var(--size);
+    width: var(--size);
+    border-radius: 50%;
+    color: #8a8a8a;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0;
+    right: 1em;
+    & > * {
+      border-radius: 50%;
+    }
+    &:hover {
+      & > * {
+        background-color: #eee;
+      }
+      color: #a02222;
+    }
+  }
+  &__select {
+    left: 1em;
+    right: initial;
+    transform: rotate(0deg);
+    background-color: #eee;
+    &:hover {
+      color: #46b450;
+      & > * {
+        background-color: inherit;
+      }
+    }
+    &.active {
+      background-color: #46b450;
+      color: white;
+    }
+  }
+  &__number {
+    // white-space: ;
+    font-size: 28px;
+    text-overflow: ellipsis;
+  }
+}

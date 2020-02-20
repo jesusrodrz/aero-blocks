@@ -1,0 +1,109 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.mensajes {
+  --side-padding: 2rem;
+  --v-pd: 90px;
+  --v-alingment: baseline;
+  --img-height: 50vh;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: auto 1fr auto;
+  grid-column-gap: 30px;
+  grid-row-gap: 10px;
+  grid-auto-flow: dense;
+  background-color: var(--bg-color);
+  padding: var(--v-pd) calc(5%);
+  @include media(1333px) {
+    padding: var(--v-pd) calc((100% - 1200px) / 2);
+  }
+
+  &.no-pd {
+    padding: var(--v-pd) 0;
+    padding-right: var(--side-padding);
+    @include media(md) {
+      padding-right: 0;
+      & > *:not(:first-child) {
+        margin: 0 var(--side-padding);
+      }
+    }
+  }
+  &.right {
+    grid-template-columns: 2fr 3fr;
+
+    &.no-pd {
+      padding: var(--v-pd) 0;
+      padding-left: var(--side-padding);
+      @include media(md) {
+        padding-left: 0;
+      }
+    }
+  }
+  &,
+  &.right {
+    @include media(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &.right &__img,
+  &.right &__img-placeholder {
+    grid-column: 2 / 3;
+    @include media(md) {
+      grid-column: 1 / 2;
+    }
+  }
+  &__title {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  &__content {
+    color: #333;
+    p {
+      font-size: 18px;
+      margin-bottom: 15px;
+      word-break: break-word;
+    }
+  }
+  &__link {
+    width: 70%;
+    padding: 10px 20px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 900;
+    font-weight: normal;
+    background: #2b323a;
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    font-size: 15px;
+    &:hover {
+      background: rgba(108, 108, 108, 0.5);
+    }
+    @include media(md) {
+      justify-self: center;
+    }
+  }
+  &__img-placeholder,
+  &__img {
+    grid-column: 1 / 2;
+    grid-row: span 3;
+    @include media(md) {
+      &.last {
+        grid-row: 4 / span 3;
+      }
+    }
+  }
+  &__img {
+    &.last {
+    }
+    width: 100%;
+    height: var(--img-height);
+    object-fit: cover;
+    align-self: var(--v-alingment);
+  }
+}

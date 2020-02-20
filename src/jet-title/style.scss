@@ -1,0 +1,19 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.jet__title {
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-size: 30px;
+  margin: 10px 0;
+  width: 90%;
+  font-weight: 700;
+  &.h2 {
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+  }
+}
+
+// ,
+// "webpack": "^3.1.0"

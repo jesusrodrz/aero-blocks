@@ -1,0 +1,16 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.section-customers {
+  &.no-data {
+    display: block;
+    min-height: 50vh;
+  }
+  &__title {
+    text-align: center;
+  }
+  grid-auto-rows: 120px;
+}

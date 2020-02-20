@@ -1,0 +1,108 @@
+.jets-container {
+  --v-pd: 0px;
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  margin: 80px 0;
+  padding: var(--v-pd) calc(5%);
+  grid-column-gap: 4%;
+  @include media(1333px) {
+    padding: var(--v-pd) calc((100% - 1200px) / 2);
+  }
+
+  @include media(md) {
+    grid-template-columns: 1fr;
+  }
+  &__content {
+  }
+  &__sidebar {
+    & > h3 {
+      font-family: 'Brandon Grotesque', sans-serif;
+      font-size: 25px;
+      margin: 10px 0;
+      width: 90%;
+      font-weight: 700;
+    }
+    & > p {
+      font-family: 'Brandon Grotesque', sans-serif;
+      font-size: 18px;
+      width: 90%;
+      margin-bottom: 10px;
+    }
+    .llamanos {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .link:hover {
+      background: rgb(83, 87, 90);
+      color: white;
+      transition: all 0.3s;
+    }
+    .link {
+      margin: 10px 0;
+      width: 100%;
+      border: 1px solid rgb(83, 87, 90);
+      border-radius: 5px;
+      padding: 10px;
+      flex: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgb(83, 87, 90);
+      transition: all 0.3s;
+    }
+    i {
+      margin-right: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .llamada_activo {
+      background: rgb(83, 87, 90);
+      color: white !important;
+      transition: all 0.3s;
+    }
+  }
+}
+.recomendados {
+  display: flex;
+  flex-direction: column;
+  &__item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    box-shadow: 1px 2px 1px 1px rgba(204, 204, 204, 0.4);
+    &,
+    &:active,
+    &:visited {
+      color: inherit;
+    }
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    h3 {
+      font-size: 18px;
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+    }
+    p {
+      i {
+        display: inline-flex;
+        margin-right: 0.5em;
+      }
+      font-size: 15px;
+      color: black;
+      font-family: 'Brandon Grotesque', sans-serif;
+    }
+    p,
+    h3 {
+      margin: 5px;
+    }
+  }
+}

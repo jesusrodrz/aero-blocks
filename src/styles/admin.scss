@@ -1,0 +1,17 @@
+// @use 'iconmoon.scss';
+@import 'iconmoon.scss';
+#menu-posts-abs_jets {
+  .dashicons-before:before {
+    font-family: 'icomoon';
+    content: '\e9af';
+  }
+}
+.components-panel__body {
+  .components-panel__body-toggle.components-button {
+    display: inline-flex;
+    align-items: center;
+  }
+  .block-category-icon {
+    margin-left: 0.5em;
+  }
+}

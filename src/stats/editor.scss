@@ -1,0 +1,60 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.stats {
+  grid-row-gap: 20px;
+  &__add {
+    background-color: #eee;
+    border-radius: 5px;
+    color: #8a8a8a;
+    border: none;
+    outline: none;
+    margin: 15%;
+    padding: 15%;
+    cursor: pointer;
+    &:hover {
+      color: #007cba;
+      background-color: rgb(247, 247, 247);
+    }
+  }
+}
+.stat {
+  margin-bottom: 0px;
+  position: relative;
+  &__number,
+  &__text {
+    min-width: 3rem;
+  }
+  &__delete {
+    --size: 30px;
+    height: var(--size);
+    width: var(--size);
+    background-color: transparent;
+    border-radius: 50%;
+    color: #8a8a8a;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    & > * {
+      border-radius: 50%;
+    }
+    &:hover {
+      & > * {
+        background-color: #eee;
+      }
+      color: #a02222;
+    }
+  }
+  &__number {
+    // white-space: ;
+    font-size: 28px;
+    text-overflow: ellipsis;
+  }
+}
