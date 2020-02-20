@@ -1,5 +1,5 @@
 import Loader from './../components/Loader/Loader.jsx';
-import Aux from './../components/Aux.jsx';
+import Aux from './../components/AuxComponent.jsx';
 
 const { __ } = wp.i18n; // Import __() from wp.i18n
 const {

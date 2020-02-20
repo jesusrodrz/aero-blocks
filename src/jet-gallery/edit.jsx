@@ -1,6 +1,6 @@
 import AddButton from '../components/AddButton/AddButton.jsx';
 import Add from '../components/AddIcon.jsx';
-import Aux from '../components/Aux.jsx';
+import Aux from '../components/AuxComponent.jsx';
 
 const { __ } = wp.i18n; // Import __() from wp.i18n
 const {
